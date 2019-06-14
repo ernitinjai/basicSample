@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/threadButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/execute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_weight=".5"
+            android:text="@string/execute"
+             />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_weight=".5"
+            android:text="@string/stop"
+             />
+
+
+
+    </LinearLayout>
+
+            <TextView
+                android:layout_below="@+id/threadButtons"
+                android:id="@+id/threadoutput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+
+    <View
+        android:id="@+id/spacer1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/threadoutput"
+        android:background="@android:color/darker_gray"
+    />
+
+
+    <Button
+        android:id="@+id/lifecycle_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spacer1"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:text="@string/lifecycleevents" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nav_view"
+        android:layout_below="@id/lifecycle_events">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_a"
+            />
+
+    </ScrollView>
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</RelativeLayout>

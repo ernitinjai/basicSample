@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ThreadExample</string>
+    <string name="activity_a">Main Activity</string>
+    <string name="activity_b">Activity B</string>
+    <string name="activity_c">Activity C</string>
+    <string name="execute">Execute Threads</string>
+    <string name="stop">Stop Threads</string>
+    <string name="lifecycleevents">Life Cycle Events</string>
+    <string name="threadName">THREAD_NAME__</string>
+</resources>
